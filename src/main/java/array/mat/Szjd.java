@@ -4,6 +4,11 @@ public class Szjd {
     private int i, j, v;
     private Szjd down, right;
 
+    class Temp {
+        int hs;
+        int ls;
+    }
+
     public int getI() {
         return i;
     }
