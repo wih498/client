@@ -125,7 +125,6 @@ public class LinkedList implements ListIntf {
         if (q != null) {
             p.next = q.next;
         }
-        java.util.LinkedList
     }
 
     public Lnode search(char x) {
