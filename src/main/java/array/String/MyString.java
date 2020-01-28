@@ -76,8 +76,23 @@ public class MyString {
         }
     }
 
-    public static void main(String[] args) {
-        MyString myString = new MyString();
-        System.out.println(myString.index_bf("abcdabceabcf", "abcf"));
+    public int[] Letter_FrequenCy(String text) {
+        String str1 = "abcdefghijklmnopqrstuvwxyz";
+        String str2 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int [] text_FrequenCy = new int[26];
+        int tint = 0;
+        String c = "";
+        for (int i = 0; i < text.length(); i++) {
+            c = text.substring(i, i + 1);
+            tint = str1.indexOf(c);
+            if (tint == -1) {
+                tint = str1.indexOf(c);
+            }
+            if (tint > 0) {
+                text_FrequenCy[tint]++;
+            }
+        }
+
+        return text_FrequenCy;
     }
 }

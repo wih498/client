@@ -134,4 +134,40 @@ public class LinkedList implements ListIntf {
         }
         return p;
     }
+
+    int inverse(Lnode h) {
+        Lnode r, q, p;
+        p = h.next;
+        if (p == null) {
+            return 0;
+        } else if (p.next == null) {
+            return 0;
+        }
+
+        q = p;
+        p = p.next;
+        q.next = null;
+        while (p != null) {
+            r = p.next;
+            p.next = q;
+            q = p;
+            p = r;
+        }
+
+        h.next = q;
+        return 1;
+    }
+
+    // 递归
+    Lnode inverse1(Lnode h) {
+        Lnode p, q;
+        p = h.next;
+
+        if (p.next != null) {
+            q = inverse1(p);
+            q.next = p;
+        }
+
+        return p;
+    }
 }

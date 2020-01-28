@@ -93,4 +93,13 @@ public class SqList implements ListIntf {
     public Object remove(Object obj) {
         return null;
     }
+
+    void inverse(int a[], int n) {
+        int t;
+        for (int i = 0; i < (n -1) / 2; i++) {
+            t = a[i];
+            a[i] = a[n - i - 1];
+            a[n - i - 1] = t;
+        }
+    }
 }
