@@ -86,7 +86,7 @@ public class MyString {
             c = text.substring(i, i + 1);
             tint = str1.indexOf(c);
             if (tint == -1) {
-                tint = str1.indexOf(c);
+                tint = str2.indexOf(c);
             }
             if (tint > 0) {
                 text_FrequenCy[tint]++;

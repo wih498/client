@@ -135,7 +135,7 @@ public class LinkedList implements ListIntf {
         return p;
     }
 
-    int inverse(Lnode h) {
+    public static int inverse(Lnode h) {
         Lnode r, q, p;
         p = h.next;
         if (p == null) {
@@ -159,12 +159,13 @@ public class LinkedList implements ListIntf {
     }
 
     // 递归
-    Lnode inverse1(Lnode h) {
+    public static Lnode inverse1(Lnode h) {
         Lnode p, q;
-        p = h.next;
+        p = h;
 
         if (p.next != null) {
-            q = inverse1(p);
+            q = inverse1(p.next);
+            p.next = null;
             q.next = p;
         }
 

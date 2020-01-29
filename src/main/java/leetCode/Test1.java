@@ -1,5 +1,6 @@
 package leetCode;
 
+import list.LinkedList;
 import list.Lnode;
 
 public class Test1 {
@@ -12,6 +13,19 @@ public class Test1 {
         b.next = c;
         c.next = d;
 
+        printLinkList(a);
+//        LinkedList.inverse(a);
+//        printLinkList(a);
+        LinkedList.inverse1(a);
+        printLinkList(a);
+    }
 
+    public static void printLinkList(Lnode h) {
+        if (h != null) {
+            System.out.println(h.data);
+            printLinkList(h.next);
+        } else {
+            System.out.println("-----");
+        }
     }
 }
