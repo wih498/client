@@ -160,15 +160,15 @@ public class LinkedList implements ListIntf {
 
     // 递归
     public static Lnode inverse1(Lnode h) {
-        Lnode p, q;
-        p = h;
-
-        if (p.next != null) {
-            q = inverse1(p.next);
-            p.next = null;
-            q.next = p;
+        if (h.next != null) {
+            Lnode p, t;
+            t = inverse1(h.next);
+            p = h.next;
+            h.next = null;
+            p.next = h;
+            return t;
         }
 
-        return p;
+        return h;
     }
 }

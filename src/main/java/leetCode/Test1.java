@@ -16,7 +16,7 @@ public class Test1 {
         printLinkList(a);
 //        LinkedList.inverse(a);
 //        printLinkList(a);
-        LinkedList.inverse1(a);
+        printLinkList(LinkedList.inverse1(a));
         printLinkList(a);
     }
 
