@@ -16,7 +16,7 @@ public class LeetCode {
         return length;
     }
 
-    boolean isRight(String s, int i, int j) {
+    private boolean isRight(String s, int i, int j) {
         HashSet<Character> hashSet = new HashSet<>();
         for (int k = i; k < j; k++) {
             if (hashSet.contains(s.charAt(k))) return false;
