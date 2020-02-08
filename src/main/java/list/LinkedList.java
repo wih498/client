@@ -171,4 +171,37 @@ public class LinkedList implements ListIntf {
 
         return h;
     }
+
+    public static Lnode hb(Lnode pa, Lnode pb) {
+        Lnode p, ph, q;
+        p = ph = new Lnode();
+        while (pa != null && pb != null) {
+            q = new Lnode();
+            if (pa.data < pb.data) {
+                q.data = pa.data;
+                pa = pa.next;
+            } else {
+                q.data = pb.data;
+                pb = pb.next;
+            }
+            p.next = q;
+            p = q;
+        }
+        while (pa != null) {
+            q = new Lnode();
+            q.data = pa.data;
+            pa = pa.next;
+            p.next = q;
+            p = q;
+        }
+        while (pb != null) {
+            q = new Lnode();
+            q.data = pb.data;
+            pb = pb.next;
+            p.next = q;
+            p = q;
+        }
+
+        return ph;
+    }
 }
